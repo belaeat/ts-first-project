@@ -1,9 +1,15 @@
-// creating interface for a Student
+// Step 1: creating interface for a Student
 
 // imports
 import { Schema, model, connect } from 'mongoose';
 
 // type declaration
+
+export type UserName = {
+  firstName: string;
+  middleName?: string;
+  lastName: string;
+};
 
 export type Guardian = {
   fathersName: string;
@@ -12,12 +18,6 @@ export type Guardian = {
   mothersName: string;
   mothersOccupation: string;
   mothersContactNo: string;
-};
-
-export type UserName = {
-  firstName: string;
-  middleName?: string;
-  lastName: string;
 };
 
 export type LocalGuardian = {
