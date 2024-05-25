@@ -11,11 +11,11 @@ const createStudent = async (req: Request, res: Response) => {
   // jehetu asynchronously hocche tai try catch method use korte hobe error handling er jonno
 
   try {
-    const student = req.body;
+    const { student: studentData } = req.body;
 
     // it will call service function and send the data
 
-    const listedData = await studentServices.insertStudentIntoDB(student);
+    const listedData = await studentServices.insertStudentIntoDB(studentData);
 
     // send response
 

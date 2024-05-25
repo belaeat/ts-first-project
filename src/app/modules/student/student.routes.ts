@@ -11,4 +11,6 @@ const router = express.Router();
 
 // creating route, and it will call controller function later
 
-router.post('create-student', studentController.createStudent);
+router.post('/create-student', studentController.createStudent);
+
+export const StudentRoutes = router;
