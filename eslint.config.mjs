@@ -20,11 +20,11 @@ export default [
       'no-undef': 'error',
     },
 
-    extends: [
-      'eslint:recommended',
-      'plugin:@typescript-eslint/recommended',
-      'prettier',
-    ],
+    // extends: [
+    //   'eslint:recommended',
+    //   'plugin:@typescript-eslint/recommended',
+    //   'prettier',
+    // ],
   },
 
   pluginJs.configs.recommended,

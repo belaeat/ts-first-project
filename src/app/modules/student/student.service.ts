@@ -12,6 +12,18 @@ const insertStudentIntoDB = async (student: Student) => {
   return listedData;
 };
 
+const getStudentsFromDB = async () => {
+  const studentsInfo = await StudentModel.find();
+  return studentsInfo;
+};
+
+const getStudentById = async (id: string) => {
+  const singleStudentInfo = await StudentModel.findOne({ id });
+  return singleStudentInfo;
+};
+
 export const studentServices = {
   insertStudentIntoDB,
+  getStudentsFromDB,
+  getStudentById,
 };

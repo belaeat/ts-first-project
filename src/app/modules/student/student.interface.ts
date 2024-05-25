@@ -1,7 +1,6 @@
 // Step 1: creating interface for a Student
 
 // imports
-import { Schema, model, connect } from 'mongoose';
 
 // type declaration
 
