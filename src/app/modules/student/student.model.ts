@@ -64,7 +64,7 @@ const localGuardianSchema = new Schema<LocalGuardian>({
 // creating schema
 
 const studentSchema = new Schema<Student>({
-  id: { type: String },
+  id: { type: String, required: true, unique: true },
   name: {
     type: userNameSchema,
     required: [true, 'Students name is required'],
@@ -73,13 +73,16 @@ const studentSchema = new Schema<Student>({
     type: String,
     enum: {
       values: ['male', 'female', 'other'],
-      message:
-        "The gender field can only be one of the following : 'male','female, or 'other'",
+      message: '{VALUE} is not valid',
     },
     required: true,
   }, // eigula predefined value, tai enum type use korechi, enum type schema'r ekta special type
 
-  email: { type: String, required: [true, 'Students email is required'] },
+  email: {
+    type: String,
+    required: [true, 'Students email is required'],
+    unique: true,
+  },
   dateOfBirth: { type: String },
   contactNumber: {
     type: String,
